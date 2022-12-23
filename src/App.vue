@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header @toggle-add-task="toggleAddTask v:showAddTask="showAddTask"></Header>
+    <Header @toggle-add-task="toggleAddTask" :showAddTask="showAddTask" />
     <div v-show="showAddTask">
       <AddTask @add-task="addTask" />
     </div>
@@ -9,7 +9,7 @@
       @toggle-reminder="toggleReminder"
       @delete-task="deleteTask"
       :tasks="tasks"
-    ></Tasks>
+    />
   </div>
 </template>
 
